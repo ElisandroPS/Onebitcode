@@ -1,0 +1,548 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header{
+    background-color: black;/*Cor do fundo do menu*/
+    display: flex;/*Colocando os itens flexiciveis e em linha*/
+    flex-direction: row;/*Com a ajuda do display flex, aqui colocamos em linha*/
+    flex: 1 0 auto;/*shortcut garante que o header ocupe todo espaço, não diminua e tenha automático*/
+    align-items: center;/*alinhamento vertical*/
+    justify-content:space-between;/*Espaçamento entre os itens do menu*/
+    min-height: 15vh;/*Altura miníma da barra de menu*/
+    padding:2% ;/*distanciei das bordas*/
+    flex-wrap: wrap; /*Quebra na responsividade*/
+}
+
+
+.login_header{
+    display: flex;/*Distancia entre os itens do menu na parte de FAQ, REGISTRO E LOGIN*/
+    gap:40px;/*Definição do espaçamento entre os itens*/
+    padding-top: 0px;
+    height: 35px;
+}
+
+
+.img_header>a> img{
+    width: 220px;
+    height: auto;
+}
+
+
+.login_header > a{
+    text-decoration: none;/*Tirando o sublinhado dos menus login, registro e FAQ*/
+    color: rgb(170, 169, 169);
+    font-size: 18px;
+    font-weight: 600; 
+}
+
+
+.login_header >a:hover{
+    border-bottom: 2px solid red;
+    cursor:pointer;
+}
+
+
+.container  h3{/*Sem o sinal de >, ele abragem todos os h3*/
+    font-size: 15px;
+}
+
+
+.main_content{
+    min-height: 100vh;/*Altura miníma de visualização do main*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);/*Divisão do grid*/
+    grid-auto-rows: minmax(60px, Auto);/*Altura miníma e máxima da linha*/
+    gap: 10px;/*Espaço entre os grids*/
+    padding:0.5%;
+    grid-template-areas: 
+    "item0 item0 item0 item0"
+    "item0 item0 item0 item0"
+    "item1 item2 item3 item10"
+    "item1 item2 item3 item10"
+    "item1 item2 item3 item10"
+    "item4 item5 item6 item10"
+    "item4 item5 item6 item10"
+    "item4 item5 item6 item10"
+    "item7 item8 item9 item10"
+    "item7 item8 item9 item10"
+    "item7 item8 item9 item10";
+}
+
+
+.item0{
+    grid-area: item0;
+    display: flex;
+    flex: 1 0 auto;/*preencher toda area, não diminuir, tamanho auto*/
+    flex-direction: column;/*Colocando em colunas*/
+    justify-content: center;
+    align-items: center;   
+}
+
+
+.item1{
+    grid-area: item1;  
+}
+
+
+.item2{
+    grid-area: item2;  
+}
+
+
+.item3{
+    grid-area: item3; 
+ }
+
+
+.item4{
+    grid-area: item4;
+}
+
+
+.item5{
+    grid-area: item5; 
+}
+
+
+.item6{
+    grid-area: item6;
+}
+
+
+.item7{
+    grid-area: item7; 
+}
+
+
+.item8{
+    grid-area: item8; 
+}
+
+
+.item9{
+    grid-area: item9;  
+}
+
+
+.item10{/*lateral_direita*/
+    grid-area: item10;
+    background-color: black;
+    color:rgb(170, 169, 169);
+    margin-left: 30px;/*Distância dos grids principais para aside/lateral_direita*/  
+}
+
+
+.paragrafo_main > h1{
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.paragrafo_main > p{
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.main_content > .img >img{/*todas as imagens do main do site*/
+    width: 320px;
+    height: 220px;
+    border-radius: 15px;
+}
+
+
+.main_content > .img{
+    padding: 1%;
+}
+
+
+.main_content > .img:hover{/*Efeito borda após passar o mouse por cima de cada imagem*/
+    border: 1px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+.lateral_direita > .imagem >img{/*todas as imagens da lateral direita do site*/
+    width: 200px;
+    height: 140px;
+    border-radius: 15px;
+}
+
+
+.lateral_direita > .imagem{/*Lateral direita cada item com uma borda preta para facilitar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 220px;
+    height: 160px;
+    gap: 3px;
+    margin-bottom: 10px; 
+}
+
+
+.lateral_direita > .imagem:hover{
+    width: 205px;/*colocando as bordas colado com as imagens */
+    border: 2px solid rgb(170, 169, 169);;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+.lateral_direita > .titulo_lateral{
+    padding-bottom: 5px;
+}
+
+
+.lateral_direita{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;/*Espaço entre as divs das imagens*/  
+}
+
+
+.footer{
+    background-color: black;/*Cor do fundo do menu*/
+    display: flex;/*Colocando os itens flexiciveis e em linha*/
+    flex-direction: row;/*Com a ajuda do display flex, aqui colocamos em linha*/
+    flex: 1 0 auto;/*shortcut garante que o header ocupe todo espaço, não diminua e tenha automático*/
+    align-items: center;/*alinhamento vertical*/
+    justify-content:space-between;/*Espaçamento entre os itens do menu*/
+    min-height: 15vh;/*Altura miníma da barra de menu*/
+    padding:1% ;/*distanciei das bordas*/
+    flex-wrap: wrap; /*Quebra na responsividade*/
+}
+
+
+.img_footer  > a > img{
+    width: 220px;/*Tamanho da img do header*/
+}
+
+
+.link_footer > a, .ancora_footer >a {
+    text-decoration: none;/*Tirando o sublinhado dos menus login, registro e FAQ*/
+    color: rgb(170, 169, 169);
+    font-size: 18px;
+}
+
+
+.link_footer > a:hover, .ancora_footer >a:hover{
+    border-bottom: 2px solid red;
+    cursor:pointer;
+}
+
+
+@media(max-width:1245px){
+    .main_content{
+        grid-template-columns: repeat(3, 1fr);/*Divisão do grid*/
+        grid-auto-rows: minmax(60px, Auto);/*Altura miníma e máxima da linha*/
+        gap: 10px;/*Espaço entre os grids*/
+        padding:0.5%;
+        grid-template-areas: 
+        "item0 item0 item0"
+        "item0 item0 item0"
+        "item1 item2 item10"
+        "item1 item2 item10"
+        "item1 item2 item10"
+        "item3 item4 item10"
+        "item3 item4 item10"
+        "item3 item4 item10"
+        "item5 item6 item10"
+        "item5 item6 item10"
+        "item5 item6 item10"
+        "item7 item8 item10"
+        "item7 item8 item10"
+        "item7 item8 item10"
+        "item9 item9 item9"
+        "item9 item9 item9"
+        "item9 item9 item9";
+    }
+
+
+    .item10 > .imagem{
+        margin-top: 50px;
+    }
+
+
+    .lateral_direita > .imagem:hover{
+        width: 205px;/*colocando as bordas colado com as imagens */
+        border: 2px solid rgb(170, 169, 169);;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    
+
+    .item9{
+        grid-area: item9; 
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .tenis .img .item9 > img{
+        display: flex;
+        width: 900px;
+    }
+
+
+    .main_content > .item9 > img{/*todas as imagens do main do site*/
+        width: 550px;
+        height: 220px;
+        border-radius: 15px;
+    }    
+}
+
+
+@media(max-width:914px){
+    .main_content{
+        grid-template-columns: repeat(2, 1fr);/*Divisão do grid*/
+        grid-auto-rows: minmax(60px, Auto);/*Altura miníma e máxima da linha*/
+        gap: 10px;/*Espaço entre os grids*/
+        padding:0.5%;
+        grid-template-areas: 
+        "item0 item0"
+        "item0 item0"
+        "item1 item10"
+        "item1 item10"
+        "item2 item10"
+        "item2 item10"
+        "item3 item10"
+        "item3 item10"
+        "item4 item10"
+        "item4 item10"
+        "item5 item10"
+        "item5 item10"
+        "item6 item10"
+        "item6 item10"
+        "item7 item10"
+        "item7 item10"
+        "item8 item10"
+        "item8 item10"
+        "item9 item10"
+        "item9 item10";
+    }
+
+
+    .main_content > .img >img{/*todas as imagens do main do site*/
+        width: 320px;
+        height: 220px;
+        border-radius: 15px;
+    }
+
+
+    .item9{
+        grid-area: item9; 
+        display:grid; 
+    }
+
+
+    .lateral_direita > .imagem{/*Lateral direita cada item com uma borda preta para facilitar */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 320px;/*mudei a largura da classe imagem após a quebra do layout*/
+        height: 460px;/*mudei o tamanho da  classe imagem após a quebra do layout*/
+        gap: 3px;
+        margin-bottom: 10px; 
+    }
+
+
+    .lateral_direita > .imagem >img{/*todas as imagens da lateral direita do site*/
+        width: 300px;/*mudei a largura da imagem*/
+        height: 340px;/*mudei o tamanho da imagem*/
+        border-radius: 15px;
+    }
+
+
+    .lateral_direita > .imagem:hover{/*todas as imagens da lateral direita do site*/
+        width: 302px;/*Tamanho da borda após passar o mouse*/
+        border-radius: 15px;
+        border: 1px solid red;
+    }
+
+
+    .lateral_direita > .imagem > h3{
+        font-size: 25px;
+    }
+
+
+     .titulo_lateral> h3{
+        font-size: 25px;
+    }  
+}
+
+
+@media(max-width:685px){
+    .main_content{
+        grid-template-columns: repeat(2, 1fr);/*Divisão do grid*/
+        grid-auto-rows: minmax(60px, Auto);/*Altura miníma e máxima da linha*/
+        gap: 10px;/*Espaço entre os grids*/
+        padding:0.5%;
+        grid-template-areas: 
+        "item0 item0"
+        "item0 item0"
+        "item1 item1"
+        "item2 item2"
+        "item3 item3"
+        "item4 item4"
+        "item5 item5"
+        "item6 item6"
+        "item7 item7"
+        "item7 item7"
+        "item8 item8"
+        "item9 item9"
+        "item10 item10"
+        "item10 item10";
+    }
+
+
+    .item10{/*lateral_direita*/
+        padding: 1%;
+        grid-area: item10;
+        margin-left: 0px;/*Distância dos grids principais para aside/lateral_direita*/  
+    }
+
+
+    .lateral_direita > .imagem >img{/*todas as imagens da lateral direita do site*/
+        width: 400px;/*mudei a largura da imagem*/
+        height: 340px;/*mudei o tamanho da imagem*/
+        border-radius: 15px;
+    }
+
+
+    .lateral_direita > .imagem:hover{/*todas as imagens da lateral direita do site*/
+        width: 402px;/*Tamanho da borda após passar o mouse*/
+        border-radius: 15px;
+        border: 1px solid red;
+    }
+
+
+    .main_content > .img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .header{
+        
+        display: flex;/*Colocando os itens flexiciveis e em linha*/
+        flex-direction: column;/*Com a ajuda do display flex, aqui colocamos em linha*/
+    }
+
+
+    .footer{
+        display: flex;/*Colocando os itens flexiciveis e em linha*/
+        flex-direction: column;/*Com a ajuda do display flex, aqui colocamos em linha*/
+    }  
+}
+
+
+@media(max-width:436px){
+    .lateral_direita > .imagem >img{/*todas as imagens da lateral direita do site*/
+        width: 270px;/*mudei a largura da imagem*/
+        height: 220px;/*mudei o tamanho da imagem*/
+        border-radius: 15px;
+    }
+
+
+    .lateral_direita > .imagem:hover{/*todas as imagens da lateral direita do site*/
+        width: 272px;/*Tamanho da borda após passar o mouse*/
+        border-radius: 15px;
+        border: 1px solid red;
+    }
+
+
+    .lateral_direita > .imagem{/*Lateral direita cada item com uma borda preta para facilitar */
+        height: 300px;/*mudei o tamanho da  classe imagem após a quebra do layout*/ 
+    }
+
+
+    .lateral_direita > .imagem > h3{
+        font-size: 23px;
+    }
+
+
+    .main_content > .img {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+
+    .item0 >h1{
+        text-align: center;
+    }
+
+
+    .item0 > p{
+        text-align: center;
+       
+    }
+}
+
+
+
+@media(max-width:320px){
+
+    .lateral_direita > .imagem >img{/*todas as imagens da lateral direita do site*/
+        width: 230px;/*mudei a largura da imagem*/
+        height: 200px;/*mudei o tamanho da imagem*/
+        border-radius: 15px;
+    }
+
+
+    .lateral_direita > .imagem:hover{/*todas as imagens da lateral direita do site*/
+        width: 232px;/*Tamanho da borda após passar o mouse*/
+        border-radius: 15px;
+        border: 1px solid red;
+    }
+
+
+    .lateral_direita > .imagem{/*Lateral direita cada item com uma borda preta para facilitar
+         */
+        width: 240px;/*TOQUE FINAL DAS RESPOSIVIDADE*/
+        height: 200px;/*mudei o tamanho da  classe imagem após a quebra do layout*/
+    }
+
+
+    .lateral_direita > .imagem > h3{
+        font-size: 18px;
+    }
+
+
+    .lateral_direita > .titulo_lateral h3{
+        font-size: 18px;
+    }
+
+
+    .main_content > .img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+    }
+
+
+    .main_content > .img >img{
+        width: 260px;
+    }
+
+
+    .item0 >h1{
+        text-align: center;
+    }
+
+    .footer{
+        text-align: center;
+    }
+}
